@@ -6,6 +6,7 @@
 
 Everything is based on the UML class diagram presented below.
 
+![blog_app_erd](https://user-images.githubusercontent.com/98363075/183529490-308a4bfa-07da-4c8f-b24d-4f95df44d2c4.png)
 
 ## Built With
 
