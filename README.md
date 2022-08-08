@@ -1,24 +1,50 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Blog App
 
-Things you may want to cover:
+> This app is a classic example of a blog website. This functional website shows the list of posts and empower readers to interact with them by adding comments and liking posts.
 
-* Ruby version
+Everything is based on the UML class diagram presented below.
 
-* System dependencies
 
-* Configuration
+## Built With
 
-* Database creation
+- Ruby, Rails, SQL.
 
-* Database initialization
+## Setup Project
+- Clone repo by using (https://github.com/Santiago220991/Blog-App.git)
+- Install dependencies with `bundle install`
 
-* How to run the test suite
+## Usage
+- Run  `rake db:create`
 
-* Services (job queues, cache servers, search engines, etc.)
+## Tests
+- Run test with `rspec spec`
 
-* Deployment instructions
+## Author
 
-* ...
+👤 **Santiago Cárdenas**
+
+- GitHub: [@Santiago Cárdenas](https://github.com/Santiago220991)
+- LinkedIn: [Santiago Cárdenas](https://www.linkedin.com/in/alexandersantiagocardenas/)
+- Twitter: [@SanCardenas10](https://twitter.com/SanCardenas10)
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Santiago220991/Blog-App/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Original design idea by Microverse.
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
