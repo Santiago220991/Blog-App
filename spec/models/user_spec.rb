@@ -20,21 +20,21 @@ RSpec.describe User, type: :model do
             expect(subject).to_not be_valid 
         end
 
-        it "Counter should be a number >= 0" do
+        it "Post Counter should be a number >= 0" do
             expect(subject).to be_valid
         end
 
-        it "Counter should not be a number < 0" do
+        it "Post Counter should not be a number < 0" do
             subject.posts_counter = -1
             expect(subject).to_not be_valid
         end
 
-        it "Counter should not be a nil" do
+        it "Post Counter should not be a nil" do
             subject.posts_counter = nil
             expect(subject).to_not be_valid
         end
 
-        it "Counter should be a number" do
+        it "Post Counter should be a number" do
             subject.posts_counter = "a"
             expect(subject).to_not be_valid
         end
