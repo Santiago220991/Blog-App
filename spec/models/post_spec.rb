@@ -23,7 +23,6 @@ RSpec.describe Post, type: :model do
 
         it "Title should not be larger than 250 characters" do
             subject.title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dapibus felis at est mattis sagittis egestas eget arcu. Cras pulvinar commodo augue nec consequat. Mauris fermentum sagittis faucibus. Sed elementum blandit nunc, a mollis risus condimentum cursus. Etiam facilisis condimentum accumsan. Integer mattis turpis id metus commodo egestas. Donec interdum convallis iaculis. Integer quis arcu at dui aliquam vestibulum ac ullamcorper mi. In urna ex, vestibulum nec posuere non, faucibus eget purus. Aenean interdum blandit maximus. Cras id enim sit amet augue finibus consectetur. Aenean a sem in augue ultricies fringilla.
-
             Curabitur vitae est magna. Maecenas blandit dolor nec leo molestie, in placerat ligula sollicitudin. Quisque velit lectus, molestie nec euismod sed, consequat sit amet mi. Praesent non nunc quis nisl volutpat aliquam scelerisque at tortor. Donec lobortis est vel nisl porttitor consectetur. Proin quis bibendum risus. Integer ultricies tempor mi, non congue ante accumsan et. Sed ac blandit enim."
             expect(subject).to_not be_valid
         end
