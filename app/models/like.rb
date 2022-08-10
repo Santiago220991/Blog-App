@@ -5,7 +5,7 @@ class Like < ApplicationRecord
 
   def l_counter
     id = post_id
-    post = Post.where(id:)
+    post = Post.find(id)
     post.update(likes_counter: Like.where(post_id: id).count)
   end
 end
