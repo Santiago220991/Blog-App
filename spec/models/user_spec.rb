@@ -11,12 +11,12 @@ RSpec.describe User, type: :model do
         end
 
         it "Name should not be blank" do
-            subject.title = nil
+            subject.name = nil
             expect(subject).to_not be_valid 
         end
 
         it "Name should not be ''" do
-            subject.title = ""
+            subject.name = ""
             expect(subject).to_not be_valid 
         end
 
@@ -31,7 +31,7 @@ RSpec.describe User, type: :model do
 
         it "Counter should not be a nil" do
             subject.posts_counter = nil
-            expect(subject).to be_valid
+            expect(subject).to_not be_valid
         end
 
         it "Counter should be a number" do
