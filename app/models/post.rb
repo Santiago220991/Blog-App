@@ -4,8 +4,8 @@ class Post < ApplicationRecord
   has_many :comments
   after_save :p_counter
   validates :title, presence: true, length: { maximum: 250 }
-  validates :comments_counter, numericality: { greater_than_or_equal_to: 0, only_integer: true}
-  validates :likes_counter, numericality: { greater_than_or_equal_to: 0, only_integer: true}
+  validates :comments_counter, numericality: { greater_than_or_equal_to: 0, only_integer: true }
+  validates :likes_counter, numericality: { greater_than_or_equal_to: 0, only_integer: true }
   def p_counter
     id = author_id
     user = User.find(id)
