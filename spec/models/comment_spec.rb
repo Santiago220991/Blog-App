@@ -17,10 +17,9 @@ RSpec.describe Comment, type: :model do
     end
 
     it 'posts_counter should be equal to 1 ' do
-        post = Post.find(comment.post_id)
-        expect(post.comments_counter).to eq(1)
+      post = Post.find(comment.post_id)
+      expect(post.comments_counter).to eq(1)
     end
-
   end
   context 'Testing Comment Validations' do
     user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.',

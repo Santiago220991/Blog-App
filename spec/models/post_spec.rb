@@ -1,15 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  context 'Testing Post Validations' do
-    User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.',
-                posts_counter: 0)
-    subject do
- Post.create(author: User.first, title: 'Hello', text: 'This is my first post', comments_counter: 0,
-             likes_counter: 0) end
+  User.create(name: 'Tom', photo: 'https://unsp', bio: 'Teacher from Mexico.', posts_counter: 0)
+  subject { Post.create(author: User.first, title: 'Hello', text: 'Post', comments_counter: 0, likes_counter: 0) }
 
-    before { subject.save }
+  before { subject.save }
 
+  context 'Testing Post [title] Validations' do
     it 'Title should be valid if it is Hello' do
       expect(subject).to be_valid
     end
@@ -28,7 +25,9 @@ RSpec.describe Post, type: :model do
       subject.title = 'a' * 251
       expect(subject).to_not be_valid
     end
+  end
 
+  context 'Testing Post [Comments, Likes] Validations' do
     it 'Comments Counter should be a number >= 0' do
       expect(subject).to be_valid
     end
