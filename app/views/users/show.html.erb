@@ -15,7 +15,7 @@
   <% @user_posts.each_with_index do |post,index|%>
     <div>
     <p>Post #<%=index+1%></p>
-    <p><%=post.text%>
+    <p><%=post.text[0...100]+"..."%>
     </div>
   <% end %>
   </body>
