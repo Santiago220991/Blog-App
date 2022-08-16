@@ -6,7 +6,7 @@ class PostsController < ActionController::Base
   end
 
   def show
-    @post = (Post.where(author_id: params[:user_id]).order(created_at: :asc))[(params[:id].to_i)-1]
+    @post = Post.where(author_id: params[:user_id]).order(created_at: :asc)[params[:id].to_i - 1]
     @comments = Comment.where(post_id: params[:id])
     @user = User.find(@post.author_id)
   end
