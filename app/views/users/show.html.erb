@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+
+  <body>
+  <p>"Here is the info of the user"</p>
+  <div>
+     <img src="<% @user.photo%>" alt="user photo" > <p>Name:  <%=@user.name%> Number of posts:  <%=@user.posts_counter%></p>
+  </div>
+  <div>
+  <p>Bio</p>
+  <p><%= @user.bio%></p>
+  </div>
+  <% @user_posts.each_with_index do |post,index|%>
+    <div>
+    <p>Post #<%=index+1%></p>
+    <p><%=post.text[0...100]+"..."%>
+    </div>
+  <% end %>
+  </body>
+</html>
