@@ -6,12 +6,12 @@
   <body>
   <p>Here is the Post info</p>
   <div>
-  <p>Post #<%=@post_num+1%> by <%=@user.name%> Comments:<%=@post.comments_counter%>, Likes:<%=@post.likes_counter%></p>
+  <p>Post #<%=params[:id]%> by <%=@user.name%> Comments:<%=@post.comments_counter%>, Likes:<%=@post.likes_counter%></p>
   <p><%=@post.text%></p>
   </div>
   <div>
   <p>Here is the list of comments: </p>
-  <% @comments.each do |comment|%>
+  <% (@comments.filter{|e| e.post_id==@post.id}).each do |comment|%>
     <p><%=(User.find(comment.author_id)).name%>:<%=comment.text%></p>
   <%end%>
   </div>
