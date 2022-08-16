@@ -4,7 +4,7 @@
   </head>
 
   <body>
-  <p>"Here is a list of users"</p>
+  <p class="users_title">"Here is a list of users"</p>
   <% @users.each do |user|%>
     <div>
      <img src="<% user.photo%>" alt="user photo" > <p>Name:  <%=user.name%> Number of posts:  <%=user.posts_counter%></h1>
