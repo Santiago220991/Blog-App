@@ -14,7 +14,7 @@ RSpec.describe 'testing users_controller', type: :request do
 
     it 'render should have a users_container class' do
       get '/users'
-      expect(response.body).to include('users_title')
+      expect(response.body).to include('user_title')
     end
   end
 
