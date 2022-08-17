@@ -14,7 +14,7 @@ RSpec.describe 'testing posts_controller', type: :request do
 
     it 'render should have a posts_container class' do
       get '/users/1/posts'
-      expect(response.body).to include('posts_title')
+      expect(response.body).to include('post_title')
     end
   end
 
