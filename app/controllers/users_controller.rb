@@ -5,6 +5,6 @@ class UsersController < ActionController::Base
 
   def show
     @user = User.find(params[:id])
-    @user_posts = Post.where(author_id: params[:id]).order(created_at: :asc)
+    @user_posts = @user.last_posts
   end
 end
