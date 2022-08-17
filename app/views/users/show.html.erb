@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-  </head>
-
-  <body>
-  <p class="user_title">"Here is the info of the user"</p>
-  <div>
-     <img src="<% @user.photo%>" alt="user photo" > <p>Name:  <%=@user.name%> Number of posts:  <%=@user.posts_counter%></p>
-  </div>
-  <div>
-  <p>Bio</p>
-  <p><%= @user.bio%></p>
+  <header class="user_title">User's data</header>
+  <%=render "shared/user_info" , user: @user%>
+  <div class="bio">
+    <p>Bio</p>
+    <p><%= @user.bio%></p>
   </div>
   <% @user_posts.each_with_index do |post,index|%>
-    <div>
-    <p>Post #<%=index+1%></p>
-    <p><%=post.text[0...100]+"..."%>
-    </div>
+    <%= render "shared/post_info", post: post, index: index%>
   <% end %>
-  </body>
-</html>
+  <div class="all_posts">
+    <button>See all posts</button>
+  </div>
