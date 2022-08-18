@@ -62,7 +62,7 @@ body {
   margin-top: 15px;
 }
 
-.add_comment_btn > *{
+.add_comment_btn > * {
   text-decoration: none;
 }
 
@@ -76,10 +76,10 @@ body {
   flex-basis: 100%;
 }
 
-.new_form :nth-child(odd){
+.new_form :nth-child(odd) {
   margin-bottom: 20px;
 }
 
-.new_form :last-child{
+.new_form :last-child {
   flex-basis: auto;
 }
