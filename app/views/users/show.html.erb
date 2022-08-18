@@ -8,5 +8,6 @@
     <%= render "shared/post_info", post: post, index: index%>
   <% end %>
   <div class="all_posts">
-    <button>See all posts</button>
+    <button><%=link_to "See all Posts", user_posts_path(@user.id)%></button>
+    <button><%=link_to "Add a Post", new_user_post_path(@user.id) %></button>
   </div>

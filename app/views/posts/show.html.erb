@@ -1,6 +1,6 @@
   <p class="post_title">Post info</p>
   <div class="post_full_info">
-    <p>Post #<%=params[:id]%> by <%=@user.name%></p>
+    <p>Post #<%=@post.id%> by <%=@user.name%></p>
     <p class=comments_likes_number>Comments: <%=@post.comments_counter%>, Likes: <%=@post.likes_counter%></p>
     <p><%=@post.text%></p>
   </div>
