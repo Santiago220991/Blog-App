@@ -57,3 +57,29 @@ body {
 .pagination button {
   font-size: 20px;
 }
+
+.add_comment_btn {
+  margin-top: 15px;
+}
+
+.add_comment_btn > *{
+  text-decoration: none;
+}
+
+.new_form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.new_form > * {
+  flex-basis: 100%;
+}
+
+.new_form :nth-child(odd){
+  margin-bottom: 20px;
+}
+
+.new_form :last-child{
+  flex-basis: auto;
+}
