@@ -1,5 +1,8 @@
   <div class="post_info">
-    <p>Post #<%=index+1%></p>
+    <p>Post #<%=post.id%></p>
     <p><%=post.text[0...100]+"..."%>
     <p class="number_comments_likes">Comments:  <%=post.comments_counter%>, Likes: <%=post.likes_counter%> </p>
+    <%= form_with model: @like, url: post_likes_path(post.id) do |f| %>
+      <%= f.submit "Like"  %>
+    <% end %>
   </div>
