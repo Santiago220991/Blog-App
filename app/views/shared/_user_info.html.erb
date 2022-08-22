@@ -1,5 +1,5 @@
     <%=link_to user_path(user.id), class: "links-to" do %>
-    <div class="users_info">
+    <div class="users_info" id="<%=user.name%>">
      <img src=<%= user.photo%> alt="user photo" > 
      <div>
      <p class="user_name"><%=user.name%> </p>
