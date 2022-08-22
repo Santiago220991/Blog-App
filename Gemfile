@@ -77,3 +77,5 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 5.1.2'
 end
+
+gem 'bullet', :group => 'development'
