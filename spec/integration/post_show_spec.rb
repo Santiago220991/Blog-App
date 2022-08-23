@@ -5,17 +5,17 @@ RSpec.describe 'Post show', type: :feature do
     user1 = User.create(name: 'user5', photo: 'https://www.test.com/user5.png', bio: 'teacher5', posts_counter: 0)
     post1 = Post.create(title: 'Sample Title', text: 'a', comments_counter: 0, likes_counter: 0,
                         author: user1)
-    post2 = Post.create(title: 'Sample Title', text: 'a', comments_counter: 0, likes_counter: 0,
-                        author: user1)
-    post3 = Post.create(title: 'Sample Title', text: 'a', comments_counter: 0, likes_counter: 0,
-                        author: user1)
-    post4 = Post.create(title: 'Sample Title', text: 'a', comments_counter: 0, likes_counter: 0,
-                        author: user1)
+    Post.create(title: 'Sample Title', text: 'a', comments_counter: 0, likes_counter: 0,
+                author: user1)
+    Post.create(title: 'Sample Title', text: 'a', comments_counter: 0, likes_counter: 0,
+                author: user1)
+    Post.create(title: 'Sample Title', text: 'a', comments_counter: 0, likes_counter: 0,
+                author: user1)
     comment1 = Comment.create(post: post1, author: user1, text: 'Hi Tom first!')
     comment2 = Comment.create(post: post1, author: user1, text: 'Hi Tom second')
     comment3 = Comment.create(post: post1, author: user1, text: 'Hi Tom third')
-    like1 = Like.create(post: post1, author: user1)
-    like2 = Like.create(post: post1, author: user1)
+    Like.create(post: post1, author: user1)
+    Like.create(post: post1, author: user1)
 
     it 'I can see who wrote the post.' do
       visit user_post_path(user_id: user1.id, id: post1.id)

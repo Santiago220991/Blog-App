@@ -5,20 +5,20 @@ RSpec.describe 'Posts index', type: :feature do
     user1 = User.create(name: 'user4', photo: 'https://www.test.com/user4.png', bio: 'teacher4', posts_counter: 0)
     post1 = Post.create(title: 'Sample Title', text: 'a', comments_counter: 0, likes_counter: 0,
                         author: user1)
-    post2 = Post.create(title: 'Sample Title', text: 'a', comments_counter: 0, likes_counter: 0,
-                        author: user1)
-    post3 = Post.create(title: 'Sample Title', text: 'a', comments_counter: 0, likes_counter: 0,
-                        author: user1)
-    post4 = Post.create(title: 'Sample Title', text: 'a', comments_counter: 0, likes_counter: 0,
-                        author: user1)
-    comment1 = Comment.create(post: post1, author: user1, text: 'Hi Tom first!')
-    comment2 = Comment.create(post: post1, author: user1, text: 'Hi Tom second')
-    comment3 = Comment.create(post: post1, author: user1, text: 'Hi Tom third')
+    Post.create(title: 'Sample Title', text: 'a', comments_counter: 0, likes_counter: 0,
+                author: user1)
+    Post.create(title: 'Sample Title', text: 'a', comments_counter: 0, likes_counter: 0,
+                author: user1)
+    post4=Post.create(title: 'Sample Title', text: 'a', comments_counter: 0, likes_counter: 0,
+                author: user1)
+    comment1=Comment.create(post: post1, author: user1, text: 'Hi Tom first!')
+    Comment.create(post: post1, author: user1, text: 'Hi Tom second')
+    Comment.create(post: post1, author: user1, text: 'Hi Tom third')
 
     it "should have the user's profile picture" do
       visit user_posts_path(user_id: user1.id)
-      images = page.find_all('img')
-      expect(page).to have_xpath("//img[contains(@src,'https://www.test.com/user4.png')]")
+      images = page.find('img')
+      expect(images).to have_xpath("//img[contains(@src,'https://www.test.com/user4.png')]")
     end
     it "Should have the user's name" do
       visit user_posts_path(user_id: user1.id)
@@ -33,7 +33,7 @@ RSpec.describe 'Posts index', type: :feature do
     it 'See some of the post body' do
       visit user_posts_path(user_id: user1.id)
       post = page.find_all('.post_info').first
-      expect(post).to have_content(post4.text + '...')
+      expect(post).to have_content("#{post4.text}...")
     end
 
     it 'I can see the first comments on a post' do
