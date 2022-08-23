@@ -9,9 +9,9 @@ RSpec.describe 'Posts index', type: :feature do
                 author: user1)
     Post.create(title: 'Sample Title', text: 'a', comments_counter: 0, likes_counter: 0,
                 author: user1)
-    post4=Post.create(title: 'Sample Title', text: 'a', comments_counter: 0, likes_counter: 0,
-                author: user1)
-    comment1=Comment.create(post: post1, author: user1, text: 'Hi Tom first!')
+    post4 = Post.create(title: 'Sample Title', text: 'a', comments_counter: 0, likes_counter: 0,
+                        author: user1)
+    comment1 = Comment.create(post: post1, author: user1, text: 'Hi Tom first!')
     Comment.create(post: post1, author: user1, text: 'Hi Tom second')
     Comment.create(post: post1, author: user1, text: 'Hi Tom third')
 
@@ -34,7 +34,7 @@ RSpec.describe 'Posts index', type: :feature do
 
     it "See Post's title" do
       visit user_posts_path(user_id: user1.id)
-      user=page.find_all(".post_info").first
+      user = page.find_all('.post_info').first
       expect(user).to have_content(post1.title)
     end
 

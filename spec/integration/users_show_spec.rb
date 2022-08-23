@@ -9,8 +9,8 @@ RSpec.describe 'Users index', type: :feature do
                 author: user1)
     Post.create(title: 'Sample Title', text: 'a', comments_counter: 0, likes_counter: 0,
                 author: user1)
-    post4=Post.create(title: 'Sample Title', text: 'a', comments_counter: 0, likes_counter: 0,
-                author: user1)
+    post4 = Post.create(title: 'Sample Title', text: 'a', comments_counter: 0, likes_counter: 0,
+                        author: user1)
     it "See User's name" do
       visit user_path(id: user1.id)
       expect(page).to have_content('user3')
