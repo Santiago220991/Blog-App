@@ -17,6 +17,11 @@ RSpec.describe 'Post show', type: :feature do
     Like.create(post: post1, author: user1)
     Like.create(post: post1, author: user1)
 
+    it "See the post's title" do
+      visit user_post_path(user_id: user1.id, id: post1.id)
+      expect(page).to have_content(post1.title)
+    end
+
     it 'I can see who wrote the post.' do
       visit user_post_path(user_id: user1.id, id: post1.id)
       expect(page).to have_content("by #{user1.name}")

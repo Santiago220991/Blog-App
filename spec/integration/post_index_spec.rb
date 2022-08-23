@@ -20,14 +20,22 @@ RSpec.describe 'Posts index', type: :feature do
       images = page.find('img')
       expect(images).to have_xpath("//img[contains(@src,'https://www.test.com/user4.png')]")
     end
+
     it "Should have the user's name" do
       visit user_posts_path(user_id: user1.id)
       expect(page).to have_content(user1.name)
     end
+
     it 'See the number of posts each user has written' do
       visit user_posts_path(user_id: user1.id)
       user = page.find('.number_posts')
       expect(user).to have_content('Number of posts:')
+    end
+
+    it "See Post's title" do
+      visit user_posts_path(user_id: user1.id)
+      user=page.find_all(".post_info").first
+      expect(user).to have_content(post1.title)
     end
 
     it 'See some of the post body' do
