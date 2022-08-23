@@ -3,6 +3,10 @@ body {
   margin-right: 15%;
 }
 
+.links-to {
+  text-decoration: none;
+}
+
 .user_title {
   text-align: center;
   font-size: 40px;
@@ -70,5 +74,9 @@ body {
 }
 
 .all_posts button > * {
+  text-decoration: none;
+}
+
+a:link {
   text-decoration: none;
 }

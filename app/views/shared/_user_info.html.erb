@@ -1,8 +1,10 @@
-    <div class="users_info">
+    <%=link_to user_path(user.id), class: "links-to" do %>
+    <div class="users_info" id="<%=user.name%>">
      <img src=<%= user.photo%> alt="user photo" > 
      <div>
      <p class="user_name"><%=user.name%> </p>
      <p class="number_posts">Number of posts:  <%=user.posts_counter%> </p>
      </div>
     </div>
+    <%end%>
  
