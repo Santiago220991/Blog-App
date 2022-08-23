@@ -72,6 +72,10 @@ body {
   justify-content: center;
 }
 
+.full_info_post_title {
+  margin-top: 0;
+}
+
 .new_form > * {
   flex-basis: 100%;
 }
@@ -82,4 +86,8 @@ body {
 
 .new_form :last-child {
   flex-basis: auto;
+}
+
+a:link {
+  text-decoration: none;
 }

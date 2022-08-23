@@ -3,7 +3,7 @@ body {
   margin-right: 15%;
 }
 
-.links-to{
+.links-to {
   text-decoration: none;
 }
 
@@ -74,5 +74,9 @@ body {
 }
 
 .all_posts button > * {
+  text-decoration: none;
+}
+
+a:link {
   text-decoration: none;
 }
