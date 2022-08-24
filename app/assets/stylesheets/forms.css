@@ -1,28 +1,28 @@
 .form-title {
-    text-align: center;
+  text-align: center;
 }
 
 .field {
-    text-align: center;
+  text-align: center;
 }
 
-.field > *{
-    width: 50%;
+.field > * {
+  width: 50%;
 }
 
 .actions {
-    text-align: center;
-    margin-top: 10px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .actions > * {
-    width: 50.8%;
+  width: 50.8%;
 }
 
-.optional-links{
-    margin-left: 25%;
+.optional-links {
+  margin-left: 25%;
 }
 
 .notice {
-    text-align: center;
+  text-align: center;
 }
