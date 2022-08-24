@@ -80,3 +80,15 @@ body {
 a:link {
   text-decoration: none;
 }
+
+.logout {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 20px;
+}
+
+.login {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 20px;
+}
