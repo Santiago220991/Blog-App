@@ -1,0 +1,24 @@
+.form-title {
+    text-align: center;
+}
+
+.field {
+    text-align: center;
+}
+
+.field > *{
+    width: 50%;
+}
+
+.actions {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.actions > * {
+    width: 50.8%;
+}
+
+.optional-links{
+    margin-left: 25%;
+}
