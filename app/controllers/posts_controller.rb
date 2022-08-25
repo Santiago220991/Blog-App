@@ -28,12 +28,10 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    post=Post.find(params[:id])
-    if Post.destroy(params[:id])
-      redirect_to user_path(post.author_id)
-    end
+    post = Post.find(params[:id])
+    redirect_to user_path(post.author_id) if Post.destroy(params[:id])
   end
-  
+
   def post_params
     params.require(:post).permit(:title, :text)
   end
