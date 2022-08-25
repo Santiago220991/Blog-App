@@ -4,6 +4,9 @@
     <p class="full_info_post_title"><%=@post.title%></p>
     <p class="comments_likes_number">Comments: <%=@post.comments_counter%>, Likes: <%=@post.likes_counter%></p>
     <p><%=@post.text%></p>
+    <% if can? :destroy, @post%>
+    <%=button_to "Delete", post_path(@post.id), method: :delete %>
+    <%end%>
   </div>
   <div class="comments_container">
     <% (@comments.filter{|e| e.post_id==@post.id}).each do |comment|%>
