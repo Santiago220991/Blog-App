@@ -84,3 +84,7 @@ gem 'bullet', group: 'development'
 gem 'devise'
 
 gem 'cancancan'
+
+gem 'jwt'
+
+gem 'bcrypt', '~> 3.1.7'
