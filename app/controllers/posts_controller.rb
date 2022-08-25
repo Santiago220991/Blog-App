@@ -33,6 +33,7 @@ class PostsController < ApplicationController
       redirect_to user_path(post.author_id)
     end
   end
+  
   def post_params
     params.require(:post).permit(:title, :text)
   end
