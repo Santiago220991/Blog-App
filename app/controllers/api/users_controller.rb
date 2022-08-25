@@ -24,14 +24,6 @@ class Api::UsersController < ApplicationController
     end
   end
 
-  # PUT /users/{username}
-  def update
-    unless @user.update(user_params)
-      render json: { errors: @user.errors.full_messages },
-             status: :unprocessable_entity
-    end
-  end
-
   # DELETE /users/{username}
   def destroy
     @user.destroy
@@ -46,6 +38,6 @@ class Api::UsersController < ApplicationController
   end
 
   def user_params
-    params.permit( :name, :email, :password, :posts_counter )
+    params.permit(:name, :email, :password, :posts_counter)
   end
 end
