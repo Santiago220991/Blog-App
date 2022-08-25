@@ -9,5 +9,7 @@
   <% end %>
   <div class="all_posts">
     <button><%=link_to "See all Posts", user_posts_path(@user.id)%></button>
+    <% if current_user.id==params[:id].to_i%>
     <button><%=link_to "Add a Post", new_user_post_path(@user.id) %></button>
+    <%end%>
   </div>

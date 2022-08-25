@@ -14,14 +14,11 @@
       <% if user_signed_in?%>
       <div class="logout">
       <%= current_user.email%>
-      <%= button_to 'Log out' , destroy_user_session_path, method: :delete%>
+      <%= button_to 'Log out' , destroy_user_session_path, method: :delete, data:{turbo: false}%>
       </div>
-    <% else %>
-      <div class="login">
-      <%= link_to 'Log in', new_user_session_path%> 
-      <%= link_to 'Sign up', new_user_registration_path%>
-    </div>
     <% end %>
+     <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
