@@ -1,5 +1,5 @@
 class Api::CommentsController < ApplicationController
-  skip_before_action :authenticate_user!
+  before_action :authorize_request
 
   def index
     @post = Post.find(params[:post_id])
