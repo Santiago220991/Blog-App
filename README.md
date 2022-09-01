@@ -14,6 +14,7 @@ Everything is based on the UML class diagram presented below.
 
 ## Setup Project
 - Clone repo by using (https://github.com/Santiago220991/Blog-App.git)
+- cd Blog-App
 - Install dependencies with `bundle install`
 
 ## Usage
@@ -21,7 +22,7 @@ Everything is based on the UML class diagram presented below.
 - Run `rails server`
 - Open a browser an introduce the next URL: http://127.0.0.1:3000/ 
 - Create a new user using the Sign up button.
-- Once you create a new user you will redirect to the login page. Before login check the rails server console for a message like this:
+- Once you create a new user you will be redirected to the login page. Before login checks the rails server console for a message like this:
 
 <p>Welcome user@gmail.com!</p>
 
@@ -30,7 +31,7 @@ Everything is based on the UML class diagram presented below.
 <p><"http://localhost:3000/users/confirmation?confirmation_token=xxxxxxxx">Confirm my account</p>
 
 
-Open the link, then login with your mail and password.
+Open the link, then log in with your mail and password.
 
 ## Tests
 - Run test with `rspec spec`
