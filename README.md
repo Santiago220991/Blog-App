@@ -18,6 +18,19 @@ Everything is based on the UML class diagram presented below.
 
 ## Usage
 - Run  `rake db:create`
+- Run `rails server`
+- Open a browser an introduce the next URL: http://127.0.0.1:3000/ 
+- Create a new user using the Sign up button.
+- Once you create a new user you will redirect to the login page. Before login check the rails server console for a message like this:
+
+<p>Welcome user@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><"http://localhost:3000/users/confirmation?confirmation_token=xxxxxxxx">Confirm my account</p>
+
+
+Open the link, then login with your mail and password.
 
 ## Tests
 - Run test with `rspec spec`
