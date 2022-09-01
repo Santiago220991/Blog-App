@@ -7,8 +7,6 @@ class LikesController < ApplicationController
     @like = Like.new
     @like.author_id = current_user.id
     @like.post_id = params[:post_id]
-     if @like.save
-      redirect_back(fallback_location: root_path)
-     end
+    redirect_back(fallback_location: root_path) if @like.save
   end
 end
