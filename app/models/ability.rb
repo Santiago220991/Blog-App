@@ -7,6 +7,7 @@ class Ability
     return unless user
 
     can :read, :all
+    can :manage, User, id: user.id
     can :manage, Post, author_id: user.id
     can :manage, Comment, author_id: user.id
 
