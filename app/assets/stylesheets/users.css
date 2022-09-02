@@ -47,7 +47,7 @@ body {
 .bio {
   border: solid 2px black;
   padding: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .bio p {
@@ -79,6 +79,11 @@ body {
 
 a:link {
   text-decoration: none;
+  color:black
+}
+
+a:visited {
+  color: black;
 }
 
 .logout {
@@ -91,4 +96,15 @@ a:link {
   display: flex;
   justify-content: flex-end;
   column-gap: 20px;
+}
+
+.edit_profile_link {
+  display: inline-block;
+  background-color: #EEEEEE;
+  padding: 4px 12px;
+  text-decoration:none;
+  border-radius:5px;
+  cursor:pointer;
+  margin-bottom: 10px;
+  border:solid black 1px;
 }

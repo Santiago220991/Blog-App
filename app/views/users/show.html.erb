@@ -4,6 +4,9 @@
     <p>Bio</p>
     <p><%= @user.bio%></p>
   </div>
+  <% if can? :manage, @user%>
+  <%=link_to "Edit Profile", edit_user_path(id: params[:id]), class:"edit_profile_link" %>
+  <%end%>
   <% @user_posts.each_with_index do |post,index|%>
     <%= render "shared/post_info", post: post, index: index, user:@user%>
   <% end %>
