@@ -79,7 +79,7 @@ body {
 
 a:link {
   text-decoration: none;
-  color:black
+  color: black;
 }
 
 a:visited {
@@ -100,13 +100,13 @@ a:visited {
 
 .edit_profile_link {
   display: inline-block;
-  background-color: #EEEEEE;
+  background-color: #eee;
   padding: 4px 12px;
-  text-decoration:none;
-  border-radius:5px;
-  cursor:pointer;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
   margin-bottom: 10px;
-  border:solid black 1px;
+  border: solid black 1px;
 }
 
 .form-title {
