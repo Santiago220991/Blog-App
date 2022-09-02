@@ -108,3 +108,16 @@ a:visited {
   margin-bottom: 10px;
   border:solid black 1px;
 }
+
+.form-title {
+  text-align: center;
+}
+
+.field {
+  text-align: center;
+}
+
+.actions {
+  text-align: center;
+  margin-top: 10px;
+}
