@@ -69,6 +69,10 @@ body {
   text-align: center;
 }
 
+.new_form > * {
+  flex-basis: 100%;
+}
+
 .all_posts button {
   font-size: 20px;
 }
@@ -111,13 +115,25 @@ a:visited {
 
 .form-title {
   text-align: center;
+  font-size: 40px;
+  margin: 0;
+  margin-bottom: 0;
 }
 
-.field {
-  text-align: center;
+.new_form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.actions {
-  text-align: center;
-  margin-top: 10px;
+.full_info_post_title {
+  margin-top: 0;
+}
+
+.new_form :nth-child(even) {
+  margin-bottom: 20px;
+}
+
+.new_form :last-child {
+  flex-basis: auto;
 }

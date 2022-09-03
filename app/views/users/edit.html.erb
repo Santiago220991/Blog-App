@@ -1,16 +1,9 @@
 <h2 class="form-title">Edit User's Data</h2>
 
-<%= form_with model: @user do |form| %>
-<div class="field">
-  <%= form.label :photo %><br />
-  <%= form.text_field :photo, placeholder: "URL", size:"60" %>
-</div>
-<div class="field">
-  <%= form.label :bio %><br />
-  <%= form.text_area :bio, size: "60x10" %>
-</div>
-  
-<div class="actions">
-<%= form.submit %>
-</div>
+<%= form_with model: @user, class: "new_form" do |form| %>
+  <%= form.label :photo %>
+  <%= form.text_field :photo, placeholder: "URL" %>
+  <%= form.label :bio %>
+  <%= form.text_area :bio, rows: 10 %>
+  <%= form.submit %>
 <% end %>
