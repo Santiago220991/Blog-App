@@ -42,7 +42,6 @@ Open the link, then log in with your mail and password.
 
 - GitHub: [@Santiago Cárdenas](https://github.com/Santiago220991)
 - LinkedIn: [Santiago Cárdenas](https://www.linkedin.com/in/alexandersantiagocardenas/)
-- Twitter: [@SanCardenas10](https://twitter.com/SanCardenas10)
 
 ---
 
